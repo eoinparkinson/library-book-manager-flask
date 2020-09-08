@@ -13,7 +13,7 @@ def my_form():
 def my_form_post():
     text = request.form["book-name"]
     processed_text = text.lower()
-    return processed_text
+    return render_template("my-form.html", message=processed_text)
 
 
 if __name__ == "__main__":
