@@ -17,9 +17,9 @@ COMPLETED = 'Completed'
 def my_form():
     return render_template("my-form.html")
 """
-
-@app.route("/")
-def my_form_post():
+# Homepage
+@app.route("/", methods=["GET","POST"])
+def searchBookForm():
     if request.method == "POST":
         if request.form["submitButton"] == "searchBook":
             text = request.form["book-name"]
@@ -34,6 +34,11 @@ def my_form_post():
 
     else:
         return render_template("my-form.html", message="")
+
+# Add Book Page
+@app.route("/add-book", methods=["GET","POST"])
+def addBookForm():
+    return render_template("add-book.html")
 
 
 if __name__ == "__main__":
