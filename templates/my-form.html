@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opening Form</title>
   </head>
   <body>
     <div>
-      <form method="POST">
-        <input name="book-name" placeholder="Enter book name">
-        <input type="submit">
-      </form>
+
+      <div>
+        <form method="POST">
+          <input name="book-name" placeholder="Enter book name">
+          <input type="submit" name="submitButton" value="searchBook">
+        </form>
+      </div>
+
+
+      <div>
+        <form method="POST">
+          <input type="submit" name="submiButton" value="addBook">
+        </form>
+      </div>
+
     </div>
 
     <div class="output-div">
