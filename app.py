@@ -1,9 +1,20 @@
-# import sqlite3
+from pathlib import Path
 import requests
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
+# finding the path of books.txt
+"""
+dataFolder = Path(r'data/books.txt')
+fileToOpen = dataFolder / "books.txt"
+"""
+
+
+# opening data/books.txt
+f = open("books.txt","r")
+
+print(f.read())
 
 # Homepage
 @app.route("/", methods=["GET","POST"])
